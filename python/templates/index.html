@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Translate anything & make a Reply</title>
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+    />
+    <style>
+       /* your styling here */
+       body {
+        background: radial-gradient(circle, #FF5733, #6B93D6);
+        width: 100%;
+        height: 200px;
+      }
+
+      .container {
+        background: linear-gradient(to bottom, #2c3e50, #3498db);   /* Background color for the container */
+  color: #ecf0f1; /* Text color */
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Box shadow for depth */
+  text-align: center; /* Center the content horizontally */
+  font-family: Arial, Helvetica, sans-serif; /* Choose your preferred font */
+  transition: background-color 0.3s ease;
+      }
+
+      h1,
+      h2 {
+        color: #dcdcdc;
+        text-align: center;
+        margin-bottom: 20px;
+        font-family: "Times New Roman", Times, serif;
+      }
+
+      h5 {
+        text-align: center;
+        margin-bottom: 20px;
+        font-weight: 400;
+        color: #a7bccb;
+        font-family: "Times New Roman", Times, serif;
+      }
+
+      label {
+        color: #dd16c2;
+      }
+
+      .form-control {
+        background-color: #34495e;
+        color: #ffffff;
+        border: none;
+      }
+
+      .btn-primary {
+        background-color: #e74c3c;
+        border-color: #e74c3c;
+      }
+
+      .btn-primary:hover {
+        background-color: #1f9dd7;
+        border-color: #d62c1a;
+      }
+
+      .email-preview {
+        background-color: #34495e;
+        color: #ffffff;
+        border: 1px solid #2c3e50;
+        margin-top: 20px;
+        padding: 20px;
+        border-radius: 10px;
+      }
+
+      .email-preview hr {
+        background-color: #2c3e50;
+        margin: 20px 0;
+      }
+
+      a {
+        color: #e74c3c;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container mt-4">
+        <a href="https://www.github.com/midhunks6460"
+        ><small>credits: github.com/midhunks6460</small></a>
+      <h1>TRANSLATE AND REPLY</h1>
+      <h5>
+        Worried about the language and its meaning???Just go for a click.
+      </h5>
+      <form action="/" method="post">
+        <div class="form-group">
+          <label for="subject">ENTER THE TEXT:</label>
+          <input
+            type="text"
+            class="form-control"
+            id="subject"
+            name="subject"
+            placeholder="Hello,How are you?"
+          />
+        </div>
+        <div class="form-group">
+          <label for="content">SELECT THE LANGUAGE:</label>
+          <textarea
+            class="form-control"
+            id="content"
+            name="content"
+            placeholder="spanish,german,french...."
+          ></textarea>
+        </div>
+        <button type="submit" class="btn btn-primary mt-2">
+          Translate the message & Make a reply
+        </button>
+      </form>
+
+      <h2 class="mt-4">TRANSLATED MESSAGE AND ITS REPLY</h2>
+      <div class="email-preview border">
+        <p class="font-weight-bold">Translated Text:{{ generated_content }}</p>
+        <hr />
+        <p>Reply:{{ generated_subject }}</p>
+        <hr />
+        <p>Meaning:{{ generated_output }}</p>
+      </div>
+    </div>
+  </body>
+</html>
+
